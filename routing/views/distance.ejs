@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Distance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="number"] {
+      font-size: 16px;
+      width: 300px;
+      max-width: 100%;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      padding: 16px 10px;
+      font-size: 20px;
+      background-color: #2094f4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    #result {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Distance of (x,y,z) from (0,0,0)</h1>
+  <div class="subtitle">Write the code for this app which calculates</div>
+  <div class="subtitle">d = Math.sqrt(x*x+y*y+z*z)</div>
+
+  <div class="input-group">
+    <input type="number" id="x" placeholder="Enter X">
+    <input type="number" id="y" placeholder="Enter Y">
+    <input type="number" id="z" placeholder="Enter Z">
+  </div>
+
+  <button onclick="calculateDistance()">CALCULATE DISTANCE</button>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateDistance() {
+      const x = parseFloat(document.getElementById('x').value) || 0;
+      const y = parseFloat(document.getElementById('y').value) || 0;
+      const z = parseFloat(document.getElementById('z').value) || 0;
+
+      const distance = Math.sqrt(x * x + y * y + z * z).toFixed(2);
+      document.getElementById('result').textContent =
+        `distance to (${x}, ${y}, ${z}) is d =  ${distance}`;
+    }
+  </script>
+</body>
+</html>

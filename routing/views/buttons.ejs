@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buttons</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .vertical-buttons {
+      display: flex;
+    }
+
+    .top-bar {
+      display: flex;
+    }
+
+    .top-bar button {
+      flex: 1;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      height: 70px;
+    }
+
+    .vertical-buttons button {
+      flex: 1;
+      padding: 19px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 500px;
+    }
+
+    .text {
+      text-align: center;
+      font-size: 40px;
+      color: black;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+      font-weight: bold;
+      padding: 50px;
+    }
+
+    .blue {
+      font-size: 25px;
+      background-color: #1800ff;
+    }
+
+    .red {
+      font-size: 25px;
+      background-color: #FF0000;
+    }
+
+    .green {
+      font-size: 25px;
+      background-color: #008002;
+    }
+
+    .vertical-buttons {
+      flex-direction: column;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="top-bar">
+      <button class="blue">BLUE BUTTON</button>
+      <button class="red">RED BUTTON</button>
+      <button class="green">GREEN BUTTON</button>
+    </div>
+
+    <div class="text">Write the code for this screen</div>
+
+    <div class="vertical-buttons">
+      <button class="blue">BLUE BUTTON</button>
+      <button class="red">RED BUTTON</button>
+      <button class="green">GREEN BUTTON</button>
+    </div>
+  </div>
+
+</body>
+</html>
